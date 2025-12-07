@@ -1,5 +1,8 @@
 package fr.il.tp6;
 
+/**
+ * Représente un étudiant avec un nom et un tableau de notes.
+ */
 public class Student {
 
 	public String name; // nom de l'étudiant

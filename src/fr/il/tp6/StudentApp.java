@@ -1,5 +1,9 @@
 package fr.il.tp6;
 
+/**
+ * affiche la moyenne d'une classe classe 
+ * et la meilleure moyenne d'un élève de cette classe
+ */
 public class StudentApp {
 
 	public static void main(String[] args) {

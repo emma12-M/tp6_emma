@@ -1,9 +1,20 @@
 package fr.il.tp6;
 
+/**
+ * Gère une liste d'étudiants et fournit des méthodes pour :
+ * - calculer la moyenne de chaque étudiant,
+ * - calculer la moyenne globale de la classe,
+ * - déterminer la meilleure moyenne,
+ * - afficher les informations des étudiants.
+ */
 public class StudentManager {
 
 	public Student[] students;
-	
+	/**
+	 * Calcule la moyenne d'un tableau de notes.
+	 * @param grades tableau de notes
+	 * @return moyenne des notes
+	 */
 	private double computeAverage(int[] grades)
 	{
 		if (grades.length == 0) return 0; // éviter division par zéro
@@ -22,6 +33,10 @@ public class StudentManager {
 		students[2] = new Student("Charlie", new int[] { 14, 14, 13 });
 	}
 
+	/**
+     * Calcule la moyenne de la classe (toutes notes confondues).
+     * @return moyenne de la classe
+     */
 	public double classAverage() {
 
 		double sumTotal = 0;
@@ -38,6 +53,10 @@ public class StudentManager {
 		return sumTotal / Totalnote; // bug : division par le nombre d'étudiants
 	}
 
+	/**
+     * Renvoie la meilleure moyenne parmi les étudiants.
+     * @return meilleure moyenne
+     */
 	public double bestAverage() {
 		double bestAverage = 0;
 		for (int i = 0; i < students.length; i++) {
@@ -48,7 +67,10 @@ public class StudentManager {
 		}
 		return  bestAverage;
 	}
-
+	
+	/**
+     * Affiche chaque étudiant, ses notes et sa moyenne.
+     */
 	public void printStudents() {
 		System.out.println("Liste des étudiants :");
 		for (int student = 0; student < students.length; student++) {
